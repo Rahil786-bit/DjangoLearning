@@ -1,0 +1,32 @@
+.Vote{
+text-align:center;
+}
+
+.list_div{
+float: left;
+border: 0px solid black;
+border-spacing: 15px 50px;
+width:20%;
+margin-top: 20px;
+margin-left:40px;
+background-color:#f7ba63;
+border-radius: 50px 20px;
+}
+.Title{
+text-align:center;
+}
+
+div.list_div:hover{
+-webkit-transform: scale(1.2);
+-ms-transform: scale(1.2);
+transform: scale(1.2);
+transition: 1s ease;
+background-color:#a1de12;
+}
+
+.icon{
+height:20px;
+float:right;
+margin-top:0px;
+margin-right:5px;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+{% for obj in object_list %}
+<div style="float:left; padding-left:80px">
+
+    <h3><a href="{{obj.get_absolute_url}}">{{obj.title}}</a></h3>
+    <p>{{obj.description}}</p>
+    <h4>{{obj.price}}</h4>
+    <p>--------------------</p>
+</div>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

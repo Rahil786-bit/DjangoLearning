@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'Blog_base.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   {% block title %}<title>List of article</title>
+    {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/list.css' %}"/>
+    {% endblock %}
+
+</head>
+<body>
+{% block content %}
+
+{% for obj in object_list %}
+<div class="list_div">
+
+     {% if request.user.username == obj.author %}
+    <a href="{{obj.get_absolute_url}}"><img class="icon" src="{% static 'css/icons8-edit-calendar-20.png' %}"></a>
+    {% endif %}
+    <h3 class="Title"><a href="{{obj.get_articleDetail_url}}">Title : {{obj.title}}</a></h3>
+
+    <h5 class="Vote">Vote : {{obj.Vote}}
+    </h5>
+
+
+</div>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

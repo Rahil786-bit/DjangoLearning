@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends 'Blog_base.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   {% block title %}<title>Welcome to Blogs</title>
+    {% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'css/welcome.css' %}"/>
+
+    {% endblock %}
+
+</head>
+<body>
+{% block content %}
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} m2" id="msg" role="alert">
+    {{message}}
+</div>
+{% endfor %}
+{% endif %}
+<h1>Welcome To Blog World!</h1>
+<p>Create Share & Read for Free</p>
+ <script>
+    setTimeout(() => {
+    const elem = document.getElementById("msg");
+    elem.parentNode.removeChild(elem);
+}, 2000);
+ </script>
+{% endblock %}
+</body>
+</html>

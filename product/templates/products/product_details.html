@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<h1>Item</h1>
+<h3>In My APP::{{object.title}}</h3>
+<p>{{object.description}}</p>
+<p>{{object.price}}</p>
+<a href="./delete">Delete</a>
+<a href="../list">Product List</a>
+{% endblock %}
+</body>
+</html>

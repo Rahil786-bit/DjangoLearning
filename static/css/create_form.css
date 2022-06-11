@@ -1,0 +1,25 @@
+   .header{
+        margin: auto;
+       width: 60%;
+       text-align:center;
+       padding: 10px;
+        }
+        .create{
+        text-align:center;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        body{
+        background-image: url("backgrnd3.jpg");
+        background-repeat: no-repeat;
+background-size:cover;
+        }
+        input{
+        border-radius: 5px;
+        }
+        textarea{
+         border-radius: 5px;
+        }
+        .submit{
+        width:10%;
+        }

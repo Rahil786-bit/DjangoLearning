@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+    <meta charset="UTF-8">
+    {% block title %}
+<title>Blog</title>
+{% endblock %}
+
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="http://127.0.0.1:8000/Blog">Home</a></li>
+  <li><a href="http://127.0.0.1:8000/Blog/create_article">Create</a></li>
+  <li><a href="http://127.0.0.1:8000/Blog/list_article">Show</a></li>
+  <li><a href="http://127.0.0.1:8000/Blog/about">About</a></li>
+</ul>
+{% block content %}
+replace me
+{% endblock %}
+</body>
+</html>

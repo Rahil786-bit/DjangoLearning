@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+</head>
+<body>
+<h1>Hello Imran Carpet!</h1>
+<p>This is an {{page_name}} page!</p>
+{{my_text}} , {{my_number}}
+<ul>
+    {% for abc in my_list %}
+
+        {% if abc != 123 %}
+            <li>{{abc|add:22}}</li>
+
+
+        {% endif %}
+
+    {% endfor %}
+</ul>
+</body>
+</html>

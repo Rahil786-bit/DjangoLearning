@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends 'Blog_base.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   {% block title %}<title>Article-{{object.title}}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/article_display.css' %}"/>
+    {% endblock %}
+
+</head>
+<body class="article_body">
+{% block content %}
+<div class="article_title">
+<h1 class="header">{{object.title}}</h1>
+<p>Author : {{object.author}}</p>
+</div>
+
+<div class="article_content">
+    <div class="line">
+       {% for line in para %}
+    <p c>{{line}}</p>
+    {% endfor %}
+    </div>
+<p class="article_vote">Vote : {{object.Vote}}</p>
+</div>
+
+{% endblock %}
+</body>
+</html>
