@@ -2,3 +2,4 @@ If the Django is install in your system then you can run below Command
 $python manage.py runserver
 in URL : http://127.0.0.1:8000/Blog/
 Type above URL then you can see the real Blog App.
+Django for Basic CRUD operation.
